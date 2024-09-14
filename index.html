@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <title>CS Course Enrollments</title>
+  </head>
+  <style>
+body {
+  font: normal 20px Abel, sans-serif;
+}
+        select {
+          font: bold 20px Abel, sans-serif;
+        }
+        table {
+          font-family: Abel, sans-serif;
+          border-collapse: collapse;
+          width: 75%;
+        }
+
+        td, th {
+          border: 1px;
+          text-align: left;
+          padding: 8px;
+          white-space: nowrap;
+        }
+
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+
+        tr:nth-child(odd) {
+          background-color: #ffffff;
+        }
+  </style>
+  <body onload="init()">
+    <h2>CS Course Enrollments,
+      <select name="quarter" id="quarter" onchange="init()">
+        <option value="Autumn" selected>Autumn</option>
+        <option value="Winter">Winter</option>
+        <option value="Spring">Spring</option>
+        <option value="Summer">Summer</option>
+      </select>
+      <select name="year" id="year" onchange="init()">
+        <option value="2024-2025" selected>2024-2025</option>
+      </select> </h2>
+    <div id="raw-data" style="display:none">
+      <a href="javascript:void(0)" onclick="document.querySelector('#raw-data').style.display='none'">hide</a>
+      <div id="raw-data-name">
+      </div>
+      <div id="raw-data-inner">
+      </div>
+    </div>
+      (please click <a href="https://web.stanford.edu/~cgregg/cgi-bin/course-enrollment/">here</a> for pre-2024-2025 data)
+      <div id="main">
+        <img alt="loader gif" src="loader.gif" width="10%">
+      </div>
+      <script src="main.js"></script>
+  </body>
