@@ -2,7 +2,7 @@ Run latest node:
 
 `% nvm install --lts` 
 
-`% node install`
+`% nvm install`
 
 To perform live typing and compliation:
 
