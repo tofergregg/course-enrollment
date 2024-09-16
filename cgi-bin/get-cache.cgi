@@ -5,7 +5,7 @@ import time
 import os
 
 CACHE_DIR = 'cache/'
-TIMEOUT = 60 * 10 # 10 minute timeout
+TIMEOUT = 60 * 30 # 30 minute timeout
 # TIMEOUT = 60 * 1 # 1 minute timeout
 
 print("Content-type: application/json\n")
